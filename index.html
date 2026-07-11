@@ -3,7 +3,16 @@
 <head>
   <!-- CÓDIGO DE VERIFICACIÓN DE GOOGLE EN SU LUGAR CORRECTO -->
   <meta name="google-site-verification" content="60l3oWbqKwpVOecgN">
-  
+ <script>
+  document.addEventListener("click", function(e) {
+    let link = e.target.closest("a");
+    if (link && link.href.includes("amazon.com")) {
+      let url = new URL(link.href);
+      url.searchParams.set("tag", "jenzblaster-20");
+      link.href = url.toString();
+    }
+  });
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MALL-INTERNATIONALWEB-SHOP.- Tu Asistente de Compras</title>
