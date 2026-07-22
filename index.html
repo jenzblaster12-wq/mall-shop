@@ -35,8 +35,8 @@
         body { font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #7c0a0a; }
         
         /* ESTILOS DEL ENCABEZADO RESTAURADO */
-        header { background-color: #78e9f6; text-align: center; padding: 25px 15px; border-bottom: 3px solid #032d57; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        header h1 { margin: 0; font-size: 35px; color: #6b0808; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+        header { background-color: #78e9f6; text-align: center; padding: 25px 15px; border-bottom: 3px solid #032d57; box-shadow: 0 2px 4px rgba(0,0,0,0.05);overflow: hidden; }
+        header h1 { margin: 0; font-size: 35px; color: #6b0808; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;position: relative; }
         header p { margin: 8px 0 0 0; font-size: 20px; color: hsl(0, 93%, 22%); }
 
         main { padding: 15px; }
@@ -83,6 +83,22 @@
         .btn-anunciate { display: inline-block; background: #333; color: #fff; padding: 6px 12px; border-radius: 4px; margin-top: 8px; cursor: pointer; font-size: 11px; text-decoration: none; }
         .seccion-descargo { background: #333; color: #fff; text-align: center; padding: 15px; margin-top: 35px; font-size: 11px; line-height: 1.4; }
         .whatsapp-flotante { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.3); z-index: 1000; }
+header h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-25deg);
+    animation: brilloOro 6s infinite ease-in-out; /* Cruza automáticamente cada 6 segundos */}
+
+/* El motor que mueve el brillo de izquierda a derecha */
+@keyframes brilloOro {
+    0% { left: -100%; }
+    15% { left: 150%; }  /* Cruza con fluidez tus letras */
+    100% { left: 150%; } /* Pausa de prestigio antes del siguiente brillo */}
     </style>
 </head>
 <body>
@@ -92,6 +108,7 @@
     <h1>Mall International Shop</h1>
     <p>Your trusted shopping portal in one place </p>
     <b>WELCOME</b>
+    
 </header>
 
 <main>
