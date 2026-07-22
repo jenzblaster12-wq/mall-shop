@@ -86,49 +86,36 @@
 header h1::after { 
     content: ''; 
     position: absolute; 
-    top: -20%; /* Ampliamos el alto para dar espacio a las lenguas de fuego */
+    top: 0; 
     left: -100%; 
-    width: 65%; 
-    height: 140%; 
+    width: 60%; 
+    height: 100%; 
     
-    /* Gradiente cónico/radial de alta intensidad que simula llamaradas desfasadas */
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(254,242,13,0.95) 45%, rgba(230,0,0,0.8) 70%, transparent 85%) !important;
-    filter: blur(6px) !important; /* Desfoque de calor espeso */
+    /* Gradiente de fuego con núcleo incandescente */
+    background: linear-gradient(90deg, transparent, rgba(254, 242, 13, 0.95) 20%, rgba(255, 255, 255, 1) 50%, rgba(254, 242, 13, 0.95) 80%, transparent) !important; 
+    filter: blur(5px) !important; /* Difumina la flama para que sea suave */
     
-    /* Recorte asimétrico en forma de flama soplete inclinada */
-    clip-path: polygon(30% 0%, 85% 15%, 100% 50%, 70% 85%, 15% 100%, 0% 50%) !important;
+    /* TRUCO MAESTRO: Recorta la luz en picos curvos asimétricos, eliminando las líneas rectas */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 15% 100%, 0% 50%) !important;
     
-    /* Activamos el doble motor: uno la transporta y el otro deforma sus bordes en vivo */
-    animation: viajeFlamaOndulante 4s infinite ease-in-out, vibracionLlama 0.2s infinite alternate linear !important; 
-    transform-origin: center !important;
+    /* Motores combinados: uno viaja de izquierda a derecha y el otro ondula el fuego */
+    animation: viajeFlama 4s infinite ease-in-out, ondulacionFuego 0.3s infinite alternate ease-in-out !important; 
 }
 
-/* MOTOR 1: EL VIAJE HORIZONTAL QUE INCLUYE GIROS ESPACIALES AL VUELO */
-@keyframes viajeFlamaOndulante {
-    0% { 
-        left: -100%; 
-        transform: rotate(0deg) scaleX(1); 
-    }
-    12% { 
-        transform: rotate(6deg) scaleX(1.15); /* Gira hacia arriba los bordes en el medio */
-    }
-    25% { 
-        left: 150%; 
-        transform: rotate(-8deg) scaleX(0.9); /* Quiebra los bordes al salir del letrero */
-    }  
-    100% { 
-        left: 150%; 
-        transform: rotate(0deg) scaleX(1); 
-    } 
+/* MOTOR 1: EL VIAJE HORIZONTAL CALIBRADO AL 25% */
+@keyframes viajeFlama {
+    0% { left: -100%; }
+    25% { left: 150%; }  
+    100% { left: 150%; } 
 }
 
-/* MOTOR 2: LA VIBRACIÓN CORPORATIVA (Estira, achica y deforma la llama continuamente) */
-@keyframes vibracionLlama {
+/* MOTOR 2: LA ONDULACIÓN DE LA LLAMA (Sube, baja y vibra de forma orgánica) */
+@keyframes ondulacionFuego {
     0% {
-        transform: scaleY(0.9) skewX(-20deg) translateY(2px);
+        transform: scaleY(0.9) skewX(-20deg) translateY(1px);
     }
     100% {
-        transform: scaleY(1.2) skewX(-26deg) translateY(-3px); /* Genera la ondulación elástica */
+        transform: scaleY(1.15) skewX(-28deg) translateY(-2px); /* Estira y deforma la llama al vuelo */
     }
 }
     </style>
