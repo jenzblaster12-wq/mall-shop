@@ -83,22 +83,27 @@
         .btn-anunciate { display: inline-block; background: #333; color: #fff; padding: 6px 12px; border-radius: 4px; margin-top: 8px; cursor: pointer; font-size: 11px; text-decoration: none; }
         .seccion-descargo { background: #333; color: #fff; text-align: center; padding: 15px; margin-top: 35px; font-size: 11px; line-height: 1.4; }
         .whatsapp-flotante { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.3); z-index: 1000; }
-header h1::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    transform: skewX(-25deg);
-    animation: brilloOro 6s infinite ease-in-out; /* Cruza automáticamente cada 6 segundos */}
+header h1::after {  content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: -100%; 
+    width: 60%; 
+    height: 100%; 
+    
+    /* 1. GRADIENTE DE TRES CAPAS: Núcleo blanco con bordes de fuego amarillo oro */
+    background: linear-gradient(90deg, transparent, rgba(254, 242, 13, 0.9) 20%, rgba(255, 255, 255, 1) 50%, rgba(254, 242, 13, 0.9) 80%, transparent) !important; 
+    
+    /* 2. EFECTO DE CALOR: Difumina los bordes simulando una ráfaga de fuego soplete */
+    filter: blur(4px) !important;
+    
+    transform: skewX(-25deg); 
+    animation: brilloOro 6s infinite ease-in-out; }
 
 /* El motor que mueve el brillo de izquierda a derecha */
 @keyframes brilloOro {
     0% { left: -100%; }
-    15% { left: 150%; }  /* Cruza con fluidez tus letras */
-    100% { left: 150%; } /* Pausa de prestigio antes del siguiente brillo */}
+    12% { left: 150%; }  /* Cruza con fuerza y velocidad el letrero */
+    100% { left: 150%; } /* Pausa elegante antes de la siguiente flama */}
     </style>
 </head>
 <body>
