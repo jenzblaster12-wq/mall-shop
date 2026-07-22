@@ -86,50 +86,49 @@
 header h1::after { 
     content: ''; 
     position: absolute; 
-    top: -10%; 
+    top: -20%; /* Ampliamos el alto para dar espacio a las lenguas de fuego */
     left: -100%; 
-    width: 75%; /* Más ancho para que quepa la línea de fuego extendida */
-    height: 120%; 
+    width: 65%; 
+    height: 140%; 
     
-    /* Gradiente con múltiples focos de calor que simula el pasto encendido */
-    background: radial-gradient(ellipse at center, #ffffff 0%, rgba(254,242,13,1) 35%, rgba(230,0,0,0.9) 65%, transparent 85%) !important;
-    filter: blur(4px) !important; /* Desfoque ligero para mantener los picos visibles pero orgánicos */
+    /* Gradiente cónico/radial de alta intensidad que simula llamaradas desfasadas */
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(254,242,13,0.95) 45%, rgba(230,0,0,0.8) 70%, transparent 85%) !important;
+    filter: blur(6px) !important; /* Desfoque de calor espeso */
     
-    /* TRUCO MAESTRO: Recorte dentado con picos hacia la derecha, simulando llamaradas empujadas por el viento */
-    clip-path: polygon(0% 20%, 25% 15%, 50% 30%, 75% 10%, 100% 45%, 85% 65%, 100% 80%, 65% 90%, 30% 85%, 0% 70%) !important;
+    /* Recorte asimétrico en forma de flama soplete inclinada */
+    clip-path: polygon(30% 0%, 85% 15%, 100% 50%, 70% 85%, 15% 100%, 0% 50%) !important;
     
-    /* Doble motor: Viaje con deformación por viento + vibración de las lenguas de fuego */
-    animation: avanceFuegoViento 5.5s infinite ease-in-out, lenguasVivas 0.15s infinite alternate linear !important; 
-    transform-origin: left center !important; /* El fuego se estira desde atrás hacia adelante */
+    /* Activamos el doble motor: uno la transporta y el otro deforma sus bordes en vivo */
+    animation: viajeFlamaOndulante 4s infinite ease-in-out, vibracionLlama 0.2s infinite alternate linear !important; 
+    transform-origin: center !important;
 }
 
-/* MOTOR 1: EL AVANSE DEVORADOR EMPUJADO POR EL VIENTO */
-@keyframes avanceFuegoViento {
+/* MOTOR 1: EL VIAJE HORIZONTAL QUE INCLUYE GIROS ESPACIALES AL VUELO */
+@keyframes viajeFlamaOndulante {
     0% { 
         left: -100%; 
-        transform: scaleX(0.8) skewX(-15deg); 
+        transform: rotate(0deg) scaleX(1); 
     }
-    /* En pleno cruce, el viento aplasta y estira el fuego hacia la derecha consumiendo el letrero */
     12% { 
-        transform: scaleX(1.4) skewX(-30deg) scaleY(0.9); 
+        transform: rotate(6deg) scaleX(1.15); /* Gira hacia arriba los bordes en el medio */
     }
     25% { 
         left: 150%; 
-        transform: scaleX(1) skewX(-15deg); 
+        transform: rotate(-8deg) scaleX(0.9); /* Quiebra los bordes al salir del letrero */
     }  
     100% { 
         left: 150%; 
-        transform: scaleX(0.8) skewX(-15deg); 
+        transform: rotate(0deg) scaleX(1); 
     } 
 }
 
-/* MOTOR 2: LA VIBRACIÓN REZAGADA (Los picos del pasto seco crujen y cambian de tamaño rápido) */
-@keyframes lenguasVivas {
+/* MOTOR 2: LA VIBRACIÓN CORPORATIVA (Estira, achica y deforma la llama continuamente) */
+@keyframes vibracionLlama {
     0% {
-        clip-path: polygon(0% 25%, 20% 10%, 45% 35%, 70% 5%, 100% 40%, 80% 70%, 100% 85%, 60% 95%, 35% 80%, 0% 75%) !important;
+        transform: scaleY(0.9) skewX(-20deg) translateY(2px);
     }
     100% {
-        clip-path: polygon(0% 15%, 30% 20%, 55% 25%, 80% 15%, 100% 50%, 90% 60%, 100% 75%, 70% 85%, 25% 90%, 0% 65%) !important;
+        transform: scaleY(1.2) skewX(-26deg) translateY(-3px); /* Genera la ondulación elástica */
     }
 }
     </style>
