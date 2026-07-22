@@ -99,7 +99,7 @@ header h1::after {
     clip-path: polygon(0% 20%, 25% 15%, 50% 30%, 75% 10%, 100% 45%, 85% 65%, 100% 80%, 65% 90%, 30% 85%, 0% 70%) !important;
     
     /* Doble motor: Viaje con deformación por viento + vibración de las lenguas de fuego */
-    animation: avanceFuegoViento 4.5s infinite ease-in-out, lenguasVivas 0.15s infinite alternate linear !important; 
+    animation: avanceFuegoViento 7s infinite ease-in-out, lenguasVivas 0.15s infinite alternate linear !important; 
     transform-origin: left center !important; /* El fuego se estira desde atrás hacia adelante */
 }
 
@@ -110,10 +110,10 @@ header h1::after {
         transform: scaleX(0.8) skewX(-15deg); 
     }
     /* En pleno cruce, el viento aplasta y estira el fuego hacia la derecha consumiendo el letrero */
-    12% { 
+    15% { 
         transform: scaleX(1.4) skewX(-30deg) scaleY(0.9); 
     }
-    25% { 
+    45% { 
         left: 150%; 
         transform: scaleX(1) skewX(-15deg); 
     }  
