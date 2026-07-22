@@ -4,68 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mall International Shop</title>
-    
     <!-- CÓDIGO DE VERIFICACIÓN DE GOOGLE -->
     <meta name="google-site-verification" content="CÓDIGO_DE_GOOGLE" />
-
-    <!-- SCRIPT DE RASTREO INTELIGENTE UNIFICADO -->
-    <script>
-      document.addEventListener("click", function(e) {
-        let link = e.target.closest("a");
-        if (!link) return;
-
-        // CASILLA OFICIAL DE AMAZON
-        if (link.href.includes("amazon.com")) {
-          let url = new URL(link.href);
-          url.searchParams.set("tag", "jenzblaster-20");
-          link.href = url.toString();
+    
+    <!-- ENLACES OFICIALES INTERNACIONALES (Tipografía e Iconos Mundiales) -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <!-- SCRIPT DE TRADUCCIÓN GLOBAL CON PROTOCOLO FORZADO HTTPS -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'en,es,fr,de,it,pt,zh,ja', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
         }
-
-        // CASILLA OFICIAL DE EBAY
-        if (link.href.includes("ebay.com")) {
-          let url = new URL(link.href);
-          url.searchParams.set("campid", "TU_ID_DE_EBAY"); 
-          link.href = url.toString();
-        }
-      });
     </script>
+    <script type="text/javascript" src="https://google.com"></script>
 
+    <!-- SCRIPT DE RASTREO INTELIGENTE UNIFICADO PROTEGIDO -->
+    <script>
+        document.addEventListener("click", function(e) {
+            let link = e.target.closest("a");
+            if (!link) return;
+            if (link.href.includes("amazon.com")) {
+                let url = new URL(link.href);
+                url.searchParams.set("tag", "jenzblaster-20");
+                link.href = url.toString();
+            }
+            if (link.href.includes("ebay.com")) {
+                let url = new URL(link.href);
+                url.searchParams.set("campid", "TU_ID_DE_EBAY");
+                link.href = url.toString();
+            }
+        });
+    </script>
+    
     <style>
-        /* DISEÑO RESPONSIVO CORREGIDO: TARJETAS A LA MITAD Y SIN SOBREPOSICIÓN */
-        body { font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #7c0a0a; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        /* ESTILOS DEL ENCABEZADO RESTAURADO */
-        header { background-color: #78e9f6; text-align: center; padding: 25px 15px; border-bottom: 3px solid #032d57; box-shadow: 0 2px 4px rgba(0,0,0,0.05);overflow: hidden; }
-        header h1 { margin: 0; font-size: 35px; color: #6b0808; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;position: relative; }
-        header p { margin: 8px 0 0 0; font-size: 20px; color: hsl(0, 93%, 22%); }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4; 
+            color: #7c0a0a; min-height: 100vh; padding-bottom: 80px; overflow-x: hidden;
+            top: 0px !important;
+        }
 
+        /* TU BARRA VINO TINTO EXCLUSIVA ADELGAZADA */
+        header {
+            background-color: #730215f6; text-align: center;
+            padding: 35px 15px 25px 15px; border-bottom: 3px solid #e2ea06;
+            box-shadow: 1px 4px 20px rgba(233, 245, 2, 0.15); position: relative; overflow: hidden;
+        }
+
+        /* CONTENEDOR FLOTANTE PARA EL SELECTOR MULTILINGÜE */
+        #google_translate_element {
+            position: absolute; top: 12px; right: 15px; z-index: 99999 !important; display: block !important; min-width: 140px; min-height: 26px;
+        }
+        .goog-te-gadget-simple { background-color: #0d0d61 !important; border: 1px solid #eeee06 !important; padding: 4px 8px !important; border-radius: 4px !important; font-family: 'Montserrat', sans-serif !important; font-size: 11px !important; display: block !important; }
+        .goog-te-gadget-simple a, .goog-te-menu-value span, .goog-te-menu-value var { color: #ffffff !important; text-decoration: none !important; font-style: normal !important; }
+        .goog-te-banner-frame.skiptranslate, .goog-te-banner, .goog-te-balloon-frame { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
+
+        /* EFECTO INTERNACIONAL DE LUJO: LETRAS EN LLAMAS VIVAS */
+        header h1 {
+            margin: 0 !important; font-family: 'Cinzel', serif !important; font-size: 34px !important; font-weight: bold !important; text-transform: uppercase !important; letter-spacing: 2px !important; position: relative !important; display: inline-block !important;
+            color: #ffd700 !important; background: none !important; -webkit-background-clip: initial !important; -webkit-text-fill-color: initial !important; background-clip: initial !important;
+            text-shadow: 0 0 4px #fff, 0 -2px 10px #ffcc00, 2px -5px 14px #ff4500, -2px -12px 22px #ff0000 !important;
+            animation: letrasArdiendo 0.15s infinite alternate ease-in-out, vibracionCalor 4s infinite ease-in-out !important;
+        }
+
+        @keyframes letrasArdiendo {
+            0% { text-shadow: 0 0 4px #fff, 0 -3px 8px #ffd700, 3px -7px 12px #ff4500, -2px -10px 20px #e60000 !important; }
+            100% { text-shadow: 0 0 6px #fff, 0 -1px 12px #ffcc00, -2px -4px 16px #ff4500, 3px -14px 26px #ff0000 !important; }
+        }
+        @keyframes vibracionCalor { 0% { transform: scale(1) skewX(0deg); } 50% { transform: scale(1.02) skewX(1deg); } 100% { transform: scale(1) skewX(0deg); } }
+
+        header p { margin: 8px 0 0 0; font-size: 14px; letter-spacing: 1px; color: #eee305; text-transform: uppercase; font-weight: 600; }
+        header b { display: inline-block; margin-top: 10px; font-size: 11px; letter-spacing: 4px; color: #f6f205e0; text-transform: uppercase; }
+        
         main { padding: 15px; }
         
-        /* Contenedor flexible */
-        .contenedor-productos { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 12px; 
-            justify-content: center; 
-            max-width: 1200px;
-            margin: 0 auto;
+        .contenedor-productos {
+            display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 1200px; margin: 0 auto;
         }
         
-        /* Tarjetas reducidas a la mitad */
-        .producto { 
-            background: #dbef20b7; 
-            border: 1px solid #3e2d2d; 
-            border-radius: 6px; 
-            padding: 12px; 
-            flex: 1 1 160px; 
-            max-width: 200px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.08); 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: space-between;
-            box-sizing: border-box;
-        }
-        
+        .producto {
+            background: #dbef20b7; border: 1px solid #3e2d2d; border-radius: 6px; padding: 12px; flex: 1 1 160px; max-width: 200px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;
         .encabezado-tarjeta h3 { margin-top: 0; font-size: 15px; color: #333; text-align: center; }
         .vitrina-logo { text-align: center; margin: 8px 0; min-height: 35px; display: flex; align-items: center; justify-content: center; }
         .texto-logo-vitrina { font-weight: bold; }
@@ -140,7 +167,35 @@ header h1::after {
     0% { transform: scale(1) skewX(0deg); }
     50% { transform: scale(1.02) skewX(1deg); } 
     100% { transform: scale(1) skewX(0deg); }
-}}
+}
+ .menu-idiomas-global {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    display: flex !important;
+    gap: 6px !important;
+    z-index: 99999 !important;
+}
+
+.link-idioma {
+    background-color: #111116 !important;
+    border: 1px solid #eeee06 !important; /* Fino borde amarillo a juego con tu barra */
+    color: #ffffff !important;
+    padding: 3px 6px !important;
+    border-radius: 4px !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.link-idioma:hover {
+    background-color: #eeee06 !important;
+    color: #000000 !important;
+}       
     </style>
 </head>
 <body>
