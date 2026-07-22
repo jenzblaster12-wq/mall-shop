@@ -86,36 +86,50 @@
 header h1::after { 
     content: ''; 
     position: absolute; 
-    top: 0; 
+    top: -10%; 
     left: -100%; 
-    width: 60%; 
-    height: 100%; 
+    width: 75%; /* Más ancho para que quepa la línea de fuego extendida */
+    height: 120%; 
     
-    /* Gradiente de fuego con núcleo incandescente */
-    background: linear-gradient(90deg, transparent, rgba(254, 242, 13, 0.95) 20%, rgba(255, 255, 255, 1) 50%, rgba(254, 242, 13, 0.95) 80%, transparent) !important; 
-    filter: blur(5px) !important; /* Difumina la flama para que sea suave */
+    /* Gradiente con múltiples focos de calor que simula el pasto encendido */
+    background: radial-gradient(ellipse at center, #ffffff 0%, rgba(254,242,13,1) 35%, rgba(230,0,0,0.9) 65%, transparent 85%) !important;
+    filter: blur(4px) !important; /* Desfoque ligero para mantener los picos visibles pero orgánicos */
     
-    /* TRUCO MAESTRO: Recorta la luz en picos curvos asimétricos, eliminando las líneas rectas */
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 15% 100%, 0% 50%) !important;
+    /* TRUCO MAESTRO: Recorte dentado con picos hacia la derecha, simulando llamaradas empujadas por el viento */
+    clip-path: polygon(0% 20%, 25% 15%, 50% 30%, 75% 10%, 100% 45%, 85% 65%, 100% 80%, 65% 90%, 30% 85%, 0% 70%) !important;
     
-    /* Motores combinados: uno viaja de izquierda a derecha y el otro ondula el fuego */
-    animation: viajeFlama 4s infinite ease-in-out, ondulacionFuego 0.3s infinite alternate ease-in-out !important; 
+    /* Doble motor: Viaje con deformación por viento + vibración de las lenguas de fuego */
+    animation: avanceFuegoViento 4.5s infinite ease-in-out, lenguasVivas 0.15s infinite alternate linear !important; 
+    transform-origin: left center !important; /* El fuego se estira desde atrás hacia adelante */
 }
 
-/* MOTOR 1: EL VIAJE HORIZONTAL CALIBRADO AL 25% */
-@keyframes viajeFlama {
-    0% { left: -100%; }
-    25% { left: 150%; }  
-    100% { left: 150%; } 
+/* MOTOR 1: EL AVANSE DEVORADOR EMPUJADO POR EL VIENTO */
+@keyframes avanceFuegoViento {
+    0% { 
+        left: -100%; 
+        transform: scaleX(0.8) skewX(-15deg); 
+    }
+    /* En pleno cruce, el viento aplasta y estira el fuego hacia la derecha consumiendo el letrero */
+    12% { 
+        transform: scaleX(1.4) skewX(-30deg) scaleY(0.9); 
+    }
+    25% { 
+        left: 150%; 
+        transform: scaleX(1) skewX(-15deg); 
+    }  
+    100% { 
+        left: 150%; 
+        transform: scaleX(0.8) skewX(-15deg); 
+    } 
 }
 
-/* MOTOR 2: LA ONDULACIÓN DE LA LLAMA (Sube, baja y vibra de forma orgánica) */
-@keyframes ondulacionFuego {
+/* MOTOR 2: LA VIBRACIÓN REZAGADA (Los picos del pasto seco crujen y cambian de tamaño rápido) */
+@keyframes lenguasVivas {
     0% {
-        transform: scaleY(0.9) skewX(-20deg) translateY(1px);
+        clip-path: polygon(0% 25%, 20% 10%, 45% 35%, 70% 5%, 100% 40%, 80% 70%, 100% 85%, 60% 95%, 35% 80%, 0% 75%) !important;
     }
     100% {
-        transform: scaleY(1.15) skewX(-28deg) translateY(-2px); /* Estira y deforma la llama al vuelo */
+        clip-path: polygon(0% 15%, 30% 20%, 55% 25%, 80% 15%, 100% 50%, 90% 60%, 100% 75%, 70% 85%, 25% 90%, 0% 65%) !important;
     }
 }
     </style>
