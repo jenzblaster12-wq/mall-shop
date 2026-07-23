@@ -7,7 +7,6 @@
     <!-- CÓDIGO DE VERIFICACIÓN DE GOOGLE -->
     <meta name="google-site-verification" content="CÓDIGO_DE_GOOGLE" />
     
-    <!-- ENLACES OFICIALES INTERNACIONALES (Tipografía e Iconos Mundiales) -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
     
@@ -22,9 +21,9 @@
             }, 'google_translate_element');
         }
     </script>
+    <!-- CORRECCIÓN CLAVE: Agregamos https: directo para obligar al navegador local a jalar el script -->
     <script type="text/javascript" src="https://google.com"></script>
 
-    <!-- SCRIPT DE RASTREO INTELIGENTE UNIFICADO PROTEGIDO -->
     <script>
         document.addEventListener("click", function(e) {
             let link = e.target.closest("a");
@@ -40,6 +39,11 @@
                 link.href = url.toString();
             }
         });
+
+        function abrirChatAsesor(tienda) {
+            let mensaje = encodeURIComponent("Hello Mall International Shop, I need expert assistance with my order for: " + tienda);
+            window.open("https://wa.me" + mensaje, "_blank");
+        }
     </script>
     
     <style>
@@ -47,292 +51,269 @@
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #f4f4f4; 
-            color: #7c0a0a; min-height: 100vh; padding-bottom: 80px; overflow-x: hidden;
+            background-color: #86b2f5; 
+            color: #1f2937; min-height: 100vh; padding-bottom: 80px; overflow-x: hidden;
             top: 0px !important;
         }
 
-        /* TU BARRA VINO TINTO EXCLUSIVA ADELGAZADA */
         header {
-            background-color: #730215f6; text-align: center;
-            padding: 35px 15px 25px 15px; border-bottom: 3px solid #e2ea06;
-            box-shadow: 1px 4px 20px rgba(233, 245, 2, 0.15); position: relative; overflow: hidden;
+            background-color: #711903; text-align: center;
+            padding: 55px 15px 35px 15px; border-bottom: 3px solid #e2ea06;
+            box-shadow: 1 4px 20px rgba(233, 240, 4, 0.15); position: relative;
         }
 
-        /* CONTENEDOR FLOTANTE PARA EL SELECTOR MULTILINGÜE */
+        /* UBICACIÓN COMPATIBLE FORZADA DEL SELECTOR DE IDIOMAS */
         #google_translate_element {
-            position: absolute; top: 12px; right: 15px; z-index: 99999 !important; display: block !important; min-width: 140px; min-height: 26px;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            z-index: 99999 !important;
+            display: block !important; /* Fuerza al contenedor a pintarse */
+            min-width: 140px;
+            min-height: 26px;
         }
-        .goog-te-gadget-simple { background-color: #0d0d61 !important; border: 1px solid #eeee06 !important; padding: 4px 8px !important; border-radius: 4px !important; font-family: 'Montserrat', sans-serif !important; font-size: 11px !important; display: block !important; }
-        .goog-te-gadget-simple a, .goog-te-menu-value span, .goog-te-menu-value var { color: #ffffff !important; text-decoration: none !important; font-style: normal !important; }
+        
+        /* Estilos de lujo para obligar al botón de Google a verse nítido en la barra negra */
+        .goog-te-gadget-simple {
+            background-color: #0d0d61 !important;
+            border: 1px solid #eeee06 !important;
+            padding: 4px 8px !important;
+            border-radius: 4px !important;
+            font-family: 'Montserrat', sans-serif !important;
+            font-size: 11px !important;
+            display: block !important;
+        }
+        .goog-te-gadget-simple a, .goog-te-menu-value span, .goog-te-menu-value var {
+            color: #ffffff !important;
+            text-decoration: none !important;
+            font-style: normal !important;
+        }
         .goog-te-banner-frame.skiptranslate, .goog-te-banner, .goog-te-balloon-frame { display: none !important; }
         .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
 
-        /* EFECTO INTERNACIONAL DE LUJO: LETRAS EN LLAMAS VIVAS */
         header h1 {
-            margin: 0 !important; font-family: 'Cinzel', serif !important; font-size: 34px !important; font-weight: bold !important; text-transform: uppercase !important; letter-spacing: 2px !important; position: relative !important; display: inline-block !important;
-            color: #ffd700 !important; background: none !important; -webkit-background-clip: initial !important; -webkit-text-fill-color: initial !important; background-clip: initial !important;
-            text-shadow: 0 0 4px #fff, 0 -2px 10px #ffcc00, 2px -5px 14px #ff4500, -2px -12px 22px #ff0000 !important;
-            animation: letrasArdiendo 0.15s infinite alternate ease-in-out, vibracionCalor 4s infinite ease-in-out !important;
+            margin: 0; font-family: 'Cinzel', serif; font-size: 45px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px;
+            background: linear-gradient(135deg, #f8f404 0%, #e8d504 25%, #f5f505 50%, #eeda05 75%, #aa771c 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+            filter: drop-shadow(0 2px 4px rgba(248, 236, 3, 0.874));
         }
 
-        @keyframes letrasArdiendo {
-            0% { text-shadow: 0 0 4px #fff, 0 -3px 8px #ffd700, 3px -7px 12px #ff4500, -2px -10px 20px #e60000 !important; }
-            100% { text-shadow: 0 0 6px #fff, 0 -1px 12px #ffcc00, -2px -4px 16px #ff4500, 3px -14px 26px #ff0000 !important; }
-        }
-        @keyframes vibracionCalor { 0% { transform: scale(1) skewX(0deg); } 50% { transform: scale(1.02) skewX(1deg); } 100% { transform: scale(1) skewX(0deg); } }
+        header p { margin: 8px 0 0 0; font-size: 13px; letter-spacing: 2px; color: #eee305; text-transform: uppercase; }
+        header b { display: inline-block; margin-top: 12px; font-size: 11px; letter-spacing: 4px; color: #f6f205e0; }
+        
+        main { padding: 25px 15px; }
+        .titulo-bloque { font-family: 'Cinzel', serif; font-size: 14px; letter-spacing: 3px; color: #8b6508; font-weight: 700; text-transform: uppercase; text-align: center; margin: 30px 0 15px 0; }
+        .contenedor-productos { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; max-width: 1150px; margin: 0 auto 20px auto; }
 
-        header p { margin: 8px 0 0 0; font-size: 14px; letter-spacing: 1px; color: #eee305; text-transform: uppercase; font-weight: 600; }
-        header b { display: inline-block; margin-top: 10px; font-size: 11px; letter-spacing: 4px; color: #f6f205e0; text-transform: uppercase; }
-        
-        main { padding: 15px; }
-        
-        .contenedor-productos {
-            display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 1200px; margin: 0 auto;
-        }
-        
         .producto {
-            background: #dbef20b7; border: 1px solid #3e2d2d; border-radius: 6px; padding: 12px; flex: 1 1 160px; max-width: 200px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;
-        .encabezado-tarjeta h3 { margin-top: 0; font-size: 15px; color: #333; text-align: center; }
-        .vitrina-logo { text-align: center; margin: 8px 0; min-height: 35px; display: flex; align-items: center; justify-content: center; }
-        .texto-logo-vitrina { font-weight: bold; }
+            background: #fdf905; border: 1px solid #e2e8f0; border-radius: 10px;
+            padding: 16px; flex: 1 1 200px; max-width: 230px; min-height: 220px; max-height: 220px;
+            display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .producto:hover {
+            transform: translateY(-7px);
+            border-color: rgba(179, 135, 40, 0.5) !important;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08), 0 0 15px rgba(179, 135, 40, 0.05);
+        }
+
+        .encabezado-tarjeta h3 { margin-top: 0; font-size: 13px; color: #1f2937; text-align: center; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .vitrina-logo { text-align: center; margin: 6px 0; min-height: 40px; display: flex; align-items: center; justify-content: center; }
+        .texto-logo-vitrina { font-weight: bold; letter-spacing: 0.5px; }
+        
+        .color-amazon { color: #ff9900; }
+        .color-ebay { color: #006400; }
+        .color-aliexpress { color: #ff4747; }
+        .color-walmart { color: #0071ce; }
+        .color-bestbuy { color: #fee21e; background-color: #0046be; padding: 2px 8px; border-radius: 4px; }
         .color-rockauto { color: #002f6c; }
-        .precio { font-weight: bold; color: #27ae60; font-size: 14px; text-align: center; margin: 5px 0; }
-        .producto p { font-size: 11px; color: #555; line-height: 1.3; margin: 5px 0; text-align: center; }
-        
-        /* Botones optimizados */
+        .color-shein { color: #000000; }
+        .color-temu { color: #ff5000; }
+
+        .precio { font-weight: bold; color: #25d366; font-size: 13px; text-align: center; margin: 4px 0; }
+        .producto p { font-size: 11px; color: #4b5563; line-height: 1.4; margin: 3px 0; text-align: center; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
         .btn-enlace { display: block; width: 100%; text-align: center; padding: 7px 0; margin: 4px 0; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; font-weight: bold; font-size: 11px; box-sizing: border-box; }
-        .btn-principal { background-color: #0073e6; color: rgb(20, 23, 2); }
-        .btn-chat { background-color: #25d366; color: rgb(26, 40, 1); }
-        
+        .btn-principal { background-color: #0073e6; color: #ffffff; }
+        .btn-chat { background-color: #25d366; color: #ffffff; }
+
         .contenedor-publicidad { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 25px; justify-content: center; }
-        .cuadro-publicidad { background: #96bbe8; border: 1px dashed #333; padding: 12px; width: 45%; min-width: 250px; text-align: center; border-radius: 6px; font-size: 13px; }
-        .btn-anunciate { display: inline-block; background: #333; color: #fff; padding: 6px 12px; border-radius: 4px; margin-top: 8px; cursor: pointer; font-size: 11px; text-decoration: none; }
-        .seccion-descargo { background: #333; color: #fff; text-align: center; padding: 15px; margin-top: 35px; font-size: 11px; line-height: 1.4; }
-        .whatsapp-flotante { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; box-shadow: 0 3px 8px rgba(0,0,0,0.3); z-index: 1000; } }
-  header h1 {
-    margin: 0 !important; 
-    font-family: 'Cinzel', serif !important; 
-    font-size: 34px !important; 
-    font-weight: bold !important; 
-    text-transform: uppercase !important; 
-    letter-spacing: 2px !important;
-    position: relative !important;
-    display: inline-block !important;
-    
-    /* Forzamos al navegador a destruir el oro estático anterior */
-    color: #ffd700 !important;
-    background: none !important;
-    -webkit-background-clip: initial !important;
-    -webkit-text-fill-color: initial !important;
-    background-clip: initial !important;
-
-    /* CAPAS DE FUEGO FISICO: Núcleo blanco, llamarada amarilla y bordes de fuego rojo */
-    text-shadow: 
-        0 0 4px #fff, 
-        0 -2px 10px #ffcc00, 
-        2px -5px 14px #ff4500, 
-        -2px -12px 22px #ff0000 !important;
-
-    /* Activamos los motores de vibración térmica y oleaje de llamas */
-    animation: letrasArdiendo 0.15s infinite alternate ease-in-out, vibracionCalor 4s infinite ease-in-out !important;
-}
-
-/* ELIMINAMOS EL EFECTO ::AFTER VIEJO PARA QUE NO RECOJA BASURA */
-header h1::after {
-    display: none !important;
-    content: none !important;
-}
-
-/* MOTOR 1: Movimiento rápido vertical de las sombras de fuego */
-@keyframes letrasArdiendo {
-    0% {
-        text-shadow: 
-            0 0 4px #fff, 
-            0 -3px 8px #ffd700, 
-            3px -7px 12px #ff4500, 
-            -2px -10px 20px #e60000 !important;
-    }
-    100% {
-        text-shadow: 
-            0 0 6px #fff, 
-            0 -1px 12px #ffcc00, 
-            -2px -4px 16px #ff4500, 
-            3px -14px 26px #ff0000 !important; /* Estira la llama hacia arriba */
-    }
-}
-
-/* MOTOR 2: Distorsión del aire caliente alrededor de tu marca */
-@keyframes vibracionCalor {
-    0% { transform: scale(1) skewX(0deg); }
-    50% { transform: scale(1.02) skewX(1deg); } 
-    100% { transform: scale(1) skewX(0deg); }
-}
- .menu-idiomas-global {
-    position: absolute !important;
-    top: 15px !important;
-    right: 15px !important;
-    display: flex !important;
-    gap: 6px !important;
-    z-index: 99999 !important;
-}
-
-.link-idioma {
-    background-color: #111116 !important;
-    border: 1px solid #eeee06 !important; /* Fino borde amarillo a juego con tu barra */
-    color: #ffffff !important;
-    padding: 3px 6px !important;
-    border-radius: 4px !important;
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 10px !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    transition: all 0.2s ease !important;
-}
-
-.link-idioma:hover {
-    background-color: #eeee06 !important;
-    color: #000000 !important;
-}       
+        .cuadro-publicidad { background: #ffffff; border: 1px dashed #bf953f; color: #37474f; padding: 15px; width: 45%; min-width: 260px; text-align: center; border-radius: 8px; font-size: 13px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .btn-anunciate { display: inline-block; background: linear-gradient(135deg, #bf953f, #b38728); color: #000; font-weight: bold; padding: 7px 14px; border-radius: 4px; margin-top: 10px; cursor: pointer; font-size: 11px; text-decoration: none; }
+        .seccion-descargo { background: #ffffff; color: #71717a; text-align: center; padding: 20px 15px; margin-top: 50px; font-size: 9.5px; line-height: 1.6; border-top: 1px solid #e2e8f0; }
+        .whatsapp-flotante { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; border-radius: 50%; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; font-size: 26px; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; }
     </style>
 </head>
 <body>
 
-<!-- ENCABEZADO OFICIAL DE LA PÁGINA RESTAURADO -->
-<header>
-    <h1>Mall International Shop</h1>
-    <p>Your trusted shopping portal in one place </p>
-    <b>WELCOME</b>
-    
-</header>
+    <!-- ENCABEZADO OFICIAL DE LA PÁGINA CON SELECTOR INTEGRADO -->
+    <header>
+        <!-- CASILLA FÍSICA PARA EL TRADUCTOR MULTILINGÜE DE GOOGLE -->
+        <div id="google_translate_element"></div>
 
-<main>
-    <div class="contenedor-productos">
+        <h1>Mall International Shop</h1>
+        <p>Global Shopping Directory Portal</p>
+        <b>WELCOME</b>
+    </header>
 
-        <!-- 1. ROCKAUTO --> 
-        <article class="producto"> 
-            <div class="encabezado-tarjeta"><h3>RockAuto Parts</h3></div> 
-            <div class="vitrina-logo"> 
-                <span class="texto-logo-vitrina color-rockauto" style="font-size: 20px;">RockAuto</span> 
-            </div> 
-            <p class="precio">Cotización Fija</p> 
-            <p>Repuestos mecánicos difíciles de hallar directo de RockAuto.</p> 
-            <div> 
-                <a href="https://rockauto.com" target="_blank" class="btn-enlace btn-principal">Entrar a RockAuto</a> 
-                <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('RockAuto')">Asesor</button> 
-            </div> 
-        </article>
+    <main>
+        
+        <!-- ==========================================================================
+             BLOQUE 1: SUPERPOTENCIAS DEL COMERCIO GENERAL (4 ESPACIOS)
+             ========================================================================== -->
+        <div class="titulo-bloque">Global Superstores</div>
+        <div class="contenedor-productos">
+            
+            <!-- 1. AMAZON -->
+            <article class="producto">
+                <div class="encabezado-tarjeta"><h3>Amazon Global</h3></div>
+                <div class="vitrina-logo"><span class="texto-logo-vitrina color-amazon" style="font-size: 19px;">Amazon</span></div>
+                <p class="precio">Global Delivery</p>
+                <p>The largest marketplace. World-class tech and electronics.</p>
+                <div>
+                    <a href="https://amazon.com" target="_blank" class="btn-enlace btn-principal">Shop Amazon</a>
+                    <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('Amazon')">Asesor</button>
+                </div>
+            </article>
 
-        <!-- 2. AMAZON --> 
-        <article class="producto"> 
-            <div class="encabezado-tarjeta"><h3>Amazon Portal</h3></div> 
-            <div class="vitrina-logo"> 
-                <span class="texto-logo-vitrina" style="color:#FF9900; font-size: 22px;">Amazon</span> 
-            </div> 
-            <p class="precio">Comisión: %</p> 
-            <p>Tecnología, calzados, ropa y novedades sin complicaciones.</p> 
-            <div> 
-                <a href="https://amazon.com" target="_blank" class="btn-enlace btn-principal">Entrar a Amazon</a> 
-                <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('Amazon')">Asesor</button> 
-            </div> 
-        </article>
-         <!-- 3. EBAY -->
-        <article class="producto"> 
-            <div class="encabezado-tarjeta"><h3>eBay Portal</h3></div> 
-            <div class="vitrina-logo"> 
-                <span class="texto-logo-vitrina" style="font-size: 22px;"><span style="color:#0064d2">e</span><span style="color:#e53238">b</span><span style="color:#f5af02">a</span><span style="color:#86b817">y</span></span> 
-            </div> 
-            <p class="precio">Comisión: %</p> 
-            <p>Subastas, tecnología, artículos únicos y repuestos automotrices globales.</p> 
-            <div> 
-                <a href="https://ebay.com" target="_blank" class="btn-enlace btn-principal">Entrar a eBay</a> 
-                <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('eBay')">Asesor</button> 
-            </div> 
-        </article>
+            <!-- 2. EBAY -->
+            <article class="producto">
+                <div class="encabezado-tarjeta"><h3>eBay Market</h3></div>
+                <div class="vitrina-logo"><span class="texto-logo-vitrina color-ebay" style="font-size: 19px;">eBay</span></div>
+                <p class="precio">Global Delivery</p>
+                <p>Global auctions and hard-to-find collector items.</p>
+                <div>
+                    <a href="https://ebay.com" target="_blank" class="btn-enlace btn-principal">Shop eBay</a>
+                    <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('eBay')">Asesor</button>
+                </div>
+            </article>
 
-        <!-- 4. ALIEXPRESS -->
-        <article class="producto"> 
-            <div class="encabezado-tarjeta"><h3>AliExpress</h3></div> 
-            <div class="vitrina-logo"> 
-                <span class="texto-logo-vitrina" style="color:#FF4747; font-size: 20px;">AliExpress</span> 
-            </div> 
-            <p class="precio">Comisión: %</p> 
-            <p>Novedades asiáticas, accesorios y gadgets directo con tarifas óptimas.</p> 
-            <div> 
-                <a href="https://aliexpress.com" target="_blank" class="btn-enlace btn-principal">Entrar AliExpress</a> 
-                <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('AliExpress')">Asesor</button> 
-            </div> 
-        </article> 
+            <!-- 3. ALIEXPRESS -->
+            <article class="producto">
+                <div class="encabezado-tarjeta"><h3>AliExpress</h3></div>
+                <div class="vitrina-logo"><span class="texto-logo-vitrina color-aliexpress" style="font-size: 18px;">AliExpress</span></div>
+                <p class="precio">Global Delivery</p>
+                <p>Factory-direct smart devices and innovative gadgets.</p>
+                <div>
+                    <a href="https://aliexpress.com" target="_blank" class="btn-enlace btn-principal">Shop AliExpress</a>
+                    <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('AliExpress')">Asesor</button>
+                </div>
+            </article>
 
-        <!-- 5. TEMU --> 
-        <article class="producto"> 
-            <div class="encabezado-tarjeta"><h3>TEMU Portal</h3></div> 
-            <div class="vitrina-logo"> 
-                <span class="texto-logo-vitrina" style="color:#FB581F; font-size: 22px;">TEMU</span> 
-            </div> 
-            <p class="precio">Comisión: %</p> 
-            <p>Miles de productos novedosos con ofertas increíbles a tu puerta.</p> 
-            <div> 
-                <a href="https://temu.com" target="_blank" class="btn-enlace btn-principal">Entrar a TEMU</a> 
-                <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('TEMU')">Asesor</button> 
-            </div> 
-        </article> 
+            <!-- 4. WALMART -->
+            <article class="producto">
+                <div class="encabezado-tarjeta"><h3>Walmart Store</h3></div>
+                <div class="vitrina-logo"><span class="texto-logo-vitrina color-walmart" style="font-size: 18px;">Walmart</span></div>
+                <p class="precio">Global Delivery</p>
+                <p>The retail leader. Unbeatable variety in home goods.</p>
+                <div>
+                    <a href="https://walmart.com" target="_blank" class="btn-enlace btn-principal">Shop Walmart</a>
+                    <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('Walmart')">Asesor</button>
+                </div>
+            </article>
 
-        <!-- 6. SHEIN --> 
-        <article class="producto"> 
-            <div class="encabezado-tarjeta"><h3>SHEIN Fashion</h3></div> 
-            <div class="vitrina-logo"> 
-                <span class="texto-logo-vitrina" style="color:#000000; font-size: 22px;">SHEIN</span> 
-            </div> 
-            <p class="precio">Comisión: %</p> 
-            <p>Renueva tu clóset con las últimas tendencias de moda global.</p> 
-            <div> 
-                <a href="https://shein.com" target="_blank" class="btn-enlace btn-principal">Entrar a SHEIN</a> 
-                <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('SHEIN')">Asesor</button> 
-            </div> 
-        </article> 
-         </div> <!-- Cierre de contenedor-productos -->
-
-    <!-- ==========================================================================
-         SECCIÓN DE ANUNCIANTES MUNDIALES (REPARADA DE RAÍZ Y CON ESPACIO AMPLIO)
-         ========================================================================== -->
-    <div class="titulo-bloque">Global Advertisers</div>
-    <div class="contenedor-publicidad">
-        <div class="cuadro-publicidad">
-            <strong>International Sponsorship Space</strong>
-            <p>Promote your logistics company or brand worldwide in our global directory.</p>
-            <a class="btn-anunciate" onclick="abrirChatAsesor('Anuncio Bloque 1')">Advertise Here</a>
         </div>
-        <div class="cuadro-publicidad">
-            <strong>Premium Showcase Zone</strong>
-            <p>Connect with millions of cross-border shoppers actively browsing top stores.</p>
-            <a class="btn-anunciate" onclick="abrirChatAsesor('Anuncio Bloque 2')">Advertise Here</a>
+
+        <!-- ==========================================================================
+             BLOQUE 2: ESPECIALISTAS MUNDIALES (TAMAÑO PRESTIGIOSO AMPLIADO)
+             ========================================================================== -->
+        <div class="titulo-bloque">Global Specialty Stores</div>
+        <div class="contenedor-productos">
+            
+            <!-- 5. BEST BUY -->
+            <article class="producto">
+                <div class="encabezado-tarjeta"><h3>Best Buy Tech</h3></div>
+                <div class="vitrina-logo">
+                    <span class="texto-logo-vitrina color-bestbuy" style="font-size: 15px;">BEST BUY</span>
+                </div>
+                <p class="precio">Global Delivery</p>
+                <p>Premium consumer electronics, laptops, and official devices.</p>
+                <div>
+                    <a href="https://bestbuy.com" target="_blank" class="btn-enlace btn-principal">Shop Best Buy</a>
+                    <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('Best Buy')">Asesor</button>
+                </div>
+            </article>
+
+            <!-- 6. ROCKAUTO PARTS -->
+            <article class="producto">
+                <div class="encabezado-tarjeta"><h3>RockAuto Parts</h3></div>
+                <div class="vitrina-logo">
+                    <span class="texto-logo-vitrina color-rockauto" style="font-size: 20px;">RockAuto</span>
+                </div>
+                <p class="precio">Cotización Fija</p>
+                <p>Hard-to-find mechanical auto parts from global warehouses.</p>
+                <div>
+                    <a href="https://rockauto.com" target="_blank" class="btn-enlace btn-principal">Shop RockAuto</a>
+                    <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('RockAuto')">Asesor</button>
+                </div>
+            </article>
+
+            <!-- 7. SHEIN BOUTIQUE -->
+            <article class="producto">
+                <div class="encabezado-tarjeta"><h3>SHEIN Boutique</h3></div>
+                <div class="vitrina-logo">
+                    <span class="texto-logo-vitrina color-shein" style="font-size: 20px;">SHEIN</span>
+                </div>
+                <p class="precio">Global Delivery</p>
+                <p>Global apparel leader. High-end catalog and world trends.</p>
+                <div>
+                    <a href="https://shein.com" target="_blank" class="btn-enlace btn-principal">Shop SHEIN</a>
+                    <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('SHEIN')">Asesor</button>
+                </div>
+            </article>
+
+            <!-- 8. TEMU INTERNATIONAL -->
+            <article class="producto">
+                <div class="encabezado-tarjeta"><h3>TEMU Global</h3></div>
+                <div class="vitrina-logo">
+                    <span class="texto-logo-vitrina color-temu" style="font-size: 20px;">TEMU</span>
+                </div>
+                <p class="precio">Global Delivery</p>
+                <p>Smart home organizers, kitchenware, and factory deals.</p>
+                <div>
+                    <a href="https://temu.com" target="_blank" class="btn-enlace btn-principal">Shop TEMU</a>
+                    <button class="btn-enlace btn-chat" onclick="abrirChatAsesor('TEMU')">Asesor</button>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- ==========================================================================
+             SECCIÓN DE ANUNCIANTES MUNDIALES (DESPLAZADA ABAJO CORECTAMENTE)
+             ========================================================================== -->
+        <div class="titulo-bloque">Global Advertisers</div>
+        <div class="contenedor-publicidad">
+            <div class="cuadro-publicidad">
+                <strong>International Sponsorship Space</strong>
+                <p>Promote your logistics company or brand worldwide in our global directory.</p>
+                <a class="btn-anunciate" onclick="abrirChatAsesor('Anuncio Bloque 1')">Advertise Here</a>
+            </div>
+            <div class="cuadro-publicidad">
+                <strong>Premium Showcase Zone</strong>
+                <p>Connect with millions of cross-border shoppers actively browsing top stores.</p>
+                <a class="btn-anunciate" onclick="abrirChatAsesor('Anuncio Bloque 2')">Advertise Here</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- SECCIÓN LEGAL DE DESCARGO CORPORATIVO COMPACTO (A LO LARGO DE LA PÁGINA) -->
+    <div style="max-width: 1100px; margin: 0 auto;">
+        <div class="seccion-descargo">
+            <strong>MALL INTERNATIONAL SHOP - Global Operations Disclaimer</strong>
+            <p style="margin-top: 6px; text-align: justify;">
+                MALL INTERNATIONAL SHOP operates exclusively as an independent, high-end global advertising directory and commercial affiliate platform. All brand names, logos, and registered trademarks displayed on this portal (including Amazon, eBay, AliExpress, Walmart, Best Buy, RockAuto, SHEIN, and TEMU) are the legitimate property of their respective corporate owners. Access to each shopping catalog is performed through direct and encrypted redirection to the companies' official checkout systems. MALL INTERNATIONAL SHOP does not manage transactions, payments, or physical logistics on this portal; any assistance or fixed quotes handled via our official WhatsApp channel constitute an independent personal shopping and consulting service for the convenience of global users.
+            </p>
         </div>
     </div>
 
-</main>
-
-<!-- ==========================================================================
-     SECCIÓN LEGAL DE DESCARGO CORPORATIVO (ANCLADO AL PISO EN 3 LÍNEAS)
-     ========================================================================== -->
-<div style="max-width: 1100px; margin: 0 auto; width: 100%;">
-    <div class="seccion-descargo">
-        <strong>MALL INTERNATIONAL SHOP - Global Operations Disclaimer</strong>
-        <p style="margin-top: 6px; text-align: justify;">
-            MALL INTERNATIONAL SHOP actúa exclusivamente como un directorio publicitario independiente y una plataforma comercial de afiliación global. Todos los nombres de marcas, logotipos y marcas registradas mostrados en este portal pertenecen legítimamente a sus respectivos propietarios corporativos. El acceso a cada catálogo de compras se realiza mediante redirección directa y segura a los sistemas oficiales de pago de las empresas correspondientes. MALL INTERNATIONAL SHOP no gestiona transacciones, cobros ni logística física en este portal; cualquier asistencia o cotización gestionada a través de nuestro canal oficial de WhatsApp constituye un servicio de asesoría independiente para la conveniencia de los usuarios globales.
-        </p>
-        <p style="margin-top: 8px; font-weight: bold; color: #a1a1aa; font-size: 8.5px;">
-            DESIGN BY JAVIER NUÑEZ 2026. Todos los derechos reservados. Prohibida la reproducción total o parcial de este sitio.
-        </p>
-    </div>
-</div>
-
-<!-- ENLACE REPARADO DEL BOTÓN FLOTANTE DE WHATSAPP -->
-<a class="whatsapp-flotante" href="https://wa.me" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+    <!-- BOTÓN DE CONTACTO MUNDIAL FLOTANTE -->
+    <a href="https://wa.me" class="whatsapp-flotante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
